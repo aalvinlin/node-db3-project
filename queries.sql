@@ -22,3 +22,15 @@ SELECT O.Id as "Order ID", C.CompanyName as "Ordered By", E.LastName as "NorthWi
 FROM [Order] as O
 JOIN Employee as E ON O.EmployeeId = E.id
 JOIN Customer as C on O.CustomerId = C.id
+
+-- STRETCH PROBLEMS
+
+--   Displays CategoryName and a new column called Count that shows how many products are in each category. Shows 8 records.
+
+-- not correct yet
+SELECT CategoryName, P.ProductName FROM Categories as C
+JOIN Products as P ON P.CategoryID = C.CategoryID
+ORDER BY C.CategoryID
+
+--   Display OrderID and a column called ItemCount that shows the total number of products placed on the order. Shows 196 records.
+
